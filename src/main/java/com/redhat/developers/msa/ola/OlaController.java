@@ -43,6 +43,15 @@ public class OlaController {
     private HolaService holaService;
 
     @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, value = "/holamundo", produces = "text/plain")
+    @ApiOperation("Regresa un hola mundo")
+    public String holamundo() {
+        return "Hola mundo !!";
+    }
+
+    
+    
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, value = "/ola", produces = "text/plain")
     @ApiOperation("Returns the greeting in Portuguese")
     public String ola() {
