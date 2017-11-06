@@ -27,7 +27,7 @@ public class SwaggerConfiguration {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
             .title("Microservicio de API DEMO BANK")
-            .description("Consultar operaciones al API del Banco Demo")
+            .description("Consultar operaciones al API del Banco Demo Seguridad")
 //            .contact(new Contact("AN Global", "",/*"http://developers.redhat.com"*/ "paul.montoya@agsnasoft.com"))
 //            .license("Apache License Version 2.0")
 //            .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
