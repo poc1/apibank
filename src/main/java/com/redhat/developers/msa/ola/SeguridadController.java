@@ -20,7 +20,7 @@ public class SeguridadController {
 
 	
 	@CrossOrigin
-    @RequestMapping(method = RequestMethod.GET, value = "/credencial", produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, value = "/credencial/", produces = "application/json")
     @ApiOperation("regresa el token credencial o corporativo")
     public TokenCredencial holamundo() {
 		return new TokenCredencial("QjQ2NTFDNjFGNTA5RkYwRjZGMEI0NEYyIzE4MC4xMDEuMTE2LjkjMTQ4MzYzMDgxMTMyNSNQRDk0Yld3Z2RtVnljMmx2YmowaU1TNHdJaUJsYm1OdlpHbHVaejBpU1ZOUExUZzROVGt0TVNJL1BqeDBiMnRsYmtSbFptbHVhWFJwYjI0K1BHNWhiV1UrUW1GeWNtbGxiblJ2Y3lCR1pYSnlkWHBqWVN3Z1JHRnRZWEpwY3p3dmJtRnRaVDQ4WVd4cFlYTStiakF4TURJM056d3ZZV3hwWVhNK1BIVnpaWEpKUkQ1dU1ERXdNamMzUEM5MWMyVnlTVVErUEM5MGIydGxia1JsWm1sdWFYUnBiMjQrI0RFU2VkZS9DQkMvUEtDUzVQYWRkaW5nI3YxI21leGljb2ludHJhbmV0I05PVF9VU0VEI1NIQTF3aXRoUlNBI3JOeitDV2xNUk1GQ3NSL2cwSUFNK0pQdUdlOUxFZjZEY29QSUJza2FKQmtXUVVPd3ovQ0phQktndndXcE5VVEEwL2dwdHQ3Z1hHM3hlZmVSeHdRR1ZWbnhmdEEyRWZ4bERmNkFDRkdKelFBdmZqVDNaVXgwM1YzMVJYZnllN3J6eSs5ZGR3c041cFl5eEtuVnZBL2lpQWRHc3RjRUF1UE8wck5lWjM3ZFpSND0=");
