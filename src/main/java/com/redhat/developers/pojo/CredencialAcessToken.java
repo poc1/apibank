@@ -4,7 +4,7 @@ public class CredencialAcessToken {
 
 	private String scope;
 	private String grant_type;
-	private String token; // token credencial
+	// private String token; // token credencial ( se omite este dato porque no se tiene mas )
 	private String client_id;
 	private String client_secret;
 	
@@ -12,20 +12,20 @@ public class CredencialAcessToken {
 	public CredencialAcessToken() {
 		super();
 	}
-	public CredencialAcessToken(String scope, String grant_type, String token, String client_id, String client_secret) {
+	public CredencialAcessToken(String scope, String grant_type, /*String token,*/ String client_id, String client_secret) {
 		super();
 		this.scope = scope;
 		this.grant_type = grant_type;
-		this.token = token;
+		// this.token = token;
 		this.client_id = client_id;
 		this.client_secret = client_secret;
 	}
-	public String getToken() {
-		return token;
-	}
-	public void setToken(String token) {
-		this.token = token;
-	}
+//	public String getToken() {
+//		return token;
+//	}
+//	public void setToken(String token) {
+//		this.token = token;
+//	}
 	public String getClient_id() {
 		return client_id;
 	}

@@ -45,18 +45,18 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 
 		<!-- other plugin versions -->
-		<keycloak.version>2.4.0.Final</keycloak.version>
+		<!-- <keycloak.version>2.4.0.Final</keycloak.version>
 		<openfeign.version>9.4.0</openfeign.version>
 		<openfeign.opentracing.version>0.0.3</openfeign.opentracing.version>
 		<hystrix.version>1.5.1</hystrix.version>
 		<io.opentracing.version>0.22.0</io.opentracing.version>
-		<io.opentracing.contrib.spring.autoconfigure.version>0.0.4</io.opentracing.contrib.spring.autoconfigure.version>
+		<io.opentracing.contrib.spring.autoconfigure.version>0.0.4</io.opentracing.contrib.spring.autoconfigure.version> -->
 		<swagger.version>1.5.8</swagger.version>
 		<springfox.version>2.4.0</springfox.version>
-		<version.jaeger>0.19.0</version.jaeger>
+		<!-- <version.jaeger>0.19.0</version.jaeger> -->
 		<!-- Setting the image explicity to use redhat-openjdk -->
 		<!-- There is kind of issue honoring JAVA_OPTIONS with fabric8-s2i images -->
-		<fabric8.generator.from>fabric8/s2i-java</fabric8.generator.from>
+		<!-- <fabric8.generator.from>fabric8/s2i-java</fabric8.generator.from> -->
 	</properties>
 
 	<dependencies>
@@ -68,7 +68,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-spring-boot-adapter</artifactId>
 			<version>${keycloak.version}</version>
@@ -77,10 +77,10 @@
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-tomcat8-adapter</artifactId>
 			<version>${keycloak.version}</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- feign -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>io.github.openfeign.opentracing</groupId>
 			<artifactId>feign-hystrix-opentracing</artifactId>
 			<version>${openfeign.opentracing.version}</version>
@@ -94,10 +94,10 @@
 			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-httpclient</artifactId>
 			<version>${openfeign.version}</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- hystrix-metrics-event-stream -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.netflix.hystrix</groupId>
 			<artifactId>hystrix-core</artifactId>
 			<version>${hystrix.version}</version>
@@ -106,10 +106,10 @@
 			<groupId>com.netflix.hystrix</groupId>
 			<artifactId>hystrix-metrics-event-stream</artifactId>
 			<version>${hystrix.version}</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- OpenTracing -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>io.opentracing</groupId>
 			<artifactId>opentracing-noop</artifactId>
 			<version>${io.opentracing.version}</version>
@@ -118,14 +118,14 @@
 			<groupId>io.opentracing.contrib</groupId>
 			<artifactId>opentracing-spring-web-autoconfigure</artifactId>
 			<version>${io.opentracing.contrib.spring.autoconfigure.version}</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- OpenTracing implementation - Jaeger -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.uber.jaeger</groupId>
 			<artifactId>jaeger-core</artifactId>
 			<version>${version.jaeger}</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- Swagger -->
 		<dependency>
