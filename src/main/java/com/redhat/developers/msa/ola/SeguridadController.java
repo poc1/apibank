@@ -1,6 +1,6 @@
 package com.redhat.developers.msa.ola;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,18 +12,23 @@ import com.redhat.developers.pojo.CredencialLogin;
 import com.redhat.developers.pojo.RegresoAccessToken;
 import com.redhat.developers.pojo.TokenCredencial;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+
 
 @RestController
 @RequestMapping("/seguridad")
+@Api(description = "Seguridad Controller")
 public class SeguridadController {
+	
+	@Autowired
+	public SeguridadController() {}
 
 	
 	/**
 	 * Obtener el token corporativo
 	 * @return
 	 */
-	@CrossOrigin
     @RequestMapping(method = RequestMethod.GET, value = "/credencial/", produces = "application/json")
     @ApiOperation("Obtener el token credencial o corporativo")
     public TokenCredencial GetTokenCredencial() {
@@ -36,7 +41,6 @@ public class SeguridadController {
 	 * @param login
 	 * @return
 	 */
-	@CrossOrigin
 	@RequestMapping(value="/credencial/", method=RequestMethod.POST)
 	@ApiOperation(value = "Obtener el token credencial o corporativo ( en base en el login de un usuario y pass fijos )", response = TokenCredencial.class, produces = "application/json")
     public @ResponseBody TokenCredencial PostTokenCredencial(@RequestBody CredencialLogin login) {
@@ -49,7 +53,6 @@ public class SeguridadController {
 	 * @param credencial
 	 * @return
 	 */
-	@CrossOrigin
 	@RequestMapping(value="/accesstoken/", method=RequestMethod.POST)
 	@ApiOperation(value = "Obtener el AccessToken", response = RegresoAccessToken.class, produces = "application/json")
     public @ResponseBody RegresoAccessToken postaccesstoken(@RequestBody CredencialAcessToken credencial) {
