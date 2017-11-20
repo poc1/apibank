@@ -1,13 +1,15 @@
 package com.redhat.developers.msa.ola;
 
-import static springfox.documentation.builders.PathSelectors.regex;
+// import static springfox.documentation.builders.PathSelectors.regex;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.google.common.base.Predicates;
 
 import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
@@ -28,14 +30,17 @@ public class SeguridadApplication {
 	               .select()
                 .apis(RequestHandlerSelectors.any())
                 //.apis(RequestHandlerSelectors.basePackage("com.demo.controller"))
-                .paths(regex("/seguridad/.*"))
+                //.paths(regex("/seguridad/.*"))
                 //.paths(PathSelectors.any())
                 //.paths(regex("/seguridad/.*"), regex("/token/.*"))
+                .paths(Predicates.not(PathSelectors.regex("/error"))) // Exclude Spring error controllers
                 //.paths(myPaths())
                 .build()
             .pathMapping("/")
             .apiInfo(apiInfo());	               
 	   }
+    
+    
     
 //    private Predicate<String> myPaths() {
 //        return or(
